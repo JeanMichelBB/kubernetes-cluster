@@ -1,0 +1,13 @@
+
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: twitterclone
+  namespace: flux-system
+spec:
+  interval: 1m
+  url: https://github.com/JeanMichelBB/twitterclone.git
+  ref:
+    branch: main
+  secretRef:
+    name: twitterclone-auth

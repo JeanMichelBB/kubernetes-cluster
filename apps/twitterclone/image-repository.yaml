@@ -1,0 +1,10 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: twitterclone
+  namespace: flux-system
+spec:
+  image: jeanmichelbb/twitterclone
+  interval: 5m
+  secretRef:
+    name: docker-auth

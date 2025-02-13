@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: twitterclone
+  namespace: default
+spec:
+  releaseName: twitterclone
+  chart:
+    spec:
+      chart: twitterclone
+      sourceRef:
+        kind: GitRepository
+        name: twitterclone
+  values:
+    image:
+      repository: jeanmichelbb/twitterclone
+      tag: latest
