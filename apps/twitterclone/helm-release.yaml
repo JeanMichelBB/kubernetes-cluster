@@ -13,5 +13,5 @@ spec:
         name: twitterclone
   values:
     image:
-      repository: jeanmichelbb/twitterclone
+      repository: jeanmichelbb/twc-
       tag: latest

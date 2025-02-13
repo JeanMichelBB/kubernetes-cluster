@@ -6,5 +6,7 @@ metadata:
 resources:
   - ./apps/twitterclone
 images:
-  - name: jeanmichelbb/twitterclone
-    newTag: latest
+  - name: jeanmichelbb/twc-be
+    newTag: latest  
+  - name: jeanmichelbb/twc-fe
+    newTag: latest  

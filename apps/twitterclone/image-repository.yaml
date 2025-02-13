@@ -1,10 +1,20 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImageRepository
 metadata:
-  name: twitterclone
+  name: twitterclone-backend
   namespace: flux-system
 spec:
-  image: jeanmichelbb/twitterclone
+  image: jeanmichelbb/twc-be  # Backend image name
   interval: 5m
-  secretRef:
-    name: docker-auth
+  provider: generic
+
+---
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageRepository
+metadata:
+  name: twitterclone-frontend
+  namespace: flux-system
+spec:
+  image: jeanmichelbb/twc-fe  # Frontend image name
+  interval: 5m
+  provider: generic
